@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TinyNews</string>
+    <string name="title_home">Home</string>
+    <string name="title_save">Save</string>
+    <string name="title_search">Search</string>
+    <string name="title_country">Country/Region</string>
+    <string name="title_details">Details</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name='saved_item_author'>Author:</string>
+    <string name="saved_item_description">Description:</string>
+
+</resources>
