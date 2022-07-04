@@ -21,4 +21,4 @@ This app can successfully demonstrate the following features:
 - Search the news by using keywords
 - Save and delete the news
 
-## App design Model
+## App structures
