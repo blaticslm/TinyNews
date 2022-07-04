@@ -33,5 +33,9 @@ public class HomeViewModel extends ViewModel {
         repository.favoriteArticle(article);
     }
 
+    public void deleteSavedArticle(Article article) {
+        repository.deleteSavedArticle(article);
+    }
+
 
 }

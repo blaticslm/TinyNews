@@ -11,8 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tinynews.R;
+import com.example.tinynews.TinyNewsApplication;
 import com.example.tinynews.databinding.SavedNewsItemBinding;
 import com.example.tinynews.model.Article;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +53,12 @@ public class SavedNewsAdapter extends RecyclerView.Adapter<SavedNewsAdapter.Save
         Article article = articles.get(position);
         holder.saved_item_author_content_textView.setText(article.author);
         holder.saved_item_description_content_textView.setText(article.description);
+        try{
+            Picasso.get().load(article.urlToImage).resize(400,400).into(holder.saved_thumbnail);
+        } catch(Exception e) {
+            Picasso.get().load(TinyNewsApplication.UNIVERSAL_URL).into(holder.saved_thumbnail);
+        }
+
         holder.favorite_icon.setOnClickListener(new View.OnClickListener() { //callback principle
             @Override
             public void onClick(View view) {
@@ -73,6 +81,7 @@ public class SavedNewsAdapter extends RecyclerView.Adapter<SavedNewsAdapter.Save
     public static class SaveNewsViewHolder extends RecyclerView.ViewHolder {
         TextView saved_item_author_content_textView;
         TextView saved_item_description_content_textView;
+        ImageView saved_thumbnail;
         ImageView favorite_icon;
 
         //itemView: Search_news_item
@@ -83,6 +92,7 @@ public class SavedNewsAdapter extends RecyclerView.Adapter<SavedNewsAdapter.Save
             SavedNewsItemBinding binding = SavedNewsItemBinding.bind(itemView);
             saved_item_author_content_textView = binding.savedItemAuthorContent;
             saved_item_description_content_textView = binding.savedItemDescriptionContent;
+            saved_thumbnail = binding.savedThumbnail;
             favorite_icon = binding.savedItemFavoriteImageView;
         }
     }

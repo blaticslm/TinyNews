@@ -62,12 +62,7 @@ public class SearchNewsAdapter extends RecyclerView.Adapter<SearchNewsAdapter.Se
         }
 
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                itemCallBack.onOpenDetails(article);
-            }
-        });
+        holder.itemView.setOnClickListener(view -> itemCallBack.onOpenDetails(article));
     }
 
     @Override

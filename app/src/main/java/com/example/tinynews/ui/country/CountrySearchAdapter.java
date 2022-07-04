@@ -12,8 +12,9 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class CountrySearchAdapter extends BaseAdapter{
-    private final ArrayList country_Code;
-    private ArrayList country_Code_search;
+
+    private final ArrayList country_Code; //full country list
+    private ArrayList country_Code_search;//searched country list
 
     public CountrySearchAdapter(Map<String, String> map) {
         country_Code = new ArrayList<>();
@@ -21,6 +22,7 @@ public class CountrySearchAdapter extends BaseAdapter{
         country_Code_search = new ArrayList<>(country_Code);
         notifyDataSetChanged();
     }
+
 
     @Override
     public int getCount() {
@@ -67,7 +69,6 @@ public class CountrySearchAdapter extends BaseAdapter{
                 break;
             }
         }
-
     }
 
     public void reset() {

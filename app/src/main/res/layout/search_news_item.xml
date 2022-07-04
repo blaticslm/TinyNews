@@ -26,4 +26,5 @@
         app:layout_constraintTop_toBottomOf="@id/search_item_image" />
 
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>

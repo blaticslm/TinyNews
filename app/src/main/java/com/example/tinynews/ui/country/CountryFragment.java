@@ -1,7 +1,5 @@
 package com.example.tinynews.ui.country;
 
-import static android.widget.Toast.makeText;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -81,6 +79,7 @@ public class CountryFragment extends Fragment {
         CountrySearchAdapter countrySearchAdapter = new CountrySearchAdapter(TinyNewsApplication.currentCountry);
         binding.countryList.setAdapter(countrySearchAdapter);
 
+        //search country;
         binding.countryInputView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -107,8 +106,7 @@ public class CountryFragment extends Fragment {
             TinyNewsApplication.country_full_name_setter(String.valueOf(countrySearchAdapter.getItem(i).getValue()));
 
             //popup window
-            Toast toast = makeText(getActivity(), "Change country successfully!", Toast.LENGTH_SHORT);
-            toast.show();
+            Toast.makeText(getActivity(), "Change country successfully!", Toast.LENGTH_SHORT).show();
         });
     }
 }

@@ -19,6 +19,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CardSwipeAdapter extends RecyclerView.Adapter<CardSwipeAdapter.CardSwipeViewHolder>{
+
+    interface ItemCallBack {
+        void onOpenDetails(Article article);
+    }
+
+    private CardSwipeAdapter.ItemCallBack itemCallBack;
     private List<Article> articles = new ArrayList<>();
 
     public void setArticles(List<Article> newsList) {
@@ -26,6 +32,10 @@ public class CardSwipeAdapter extends RecyclerView.Adapter<CardSwipeAdapter.Card
         articles.addAll(newsList);
         notifyDataSetChanged();
 
+    }
+
+    public void setItemCallBack(CardSwipeAdapter.ItemCallBack itemCallBack) {
+        this.itemCallBack = itemCallBack;
     }
 
     @NonNull
