@@ -26,7 +26,7 @@ This app can successfully demonstrate the following features:
 
 ## App structure
 
-- 🟫Brown text: command/data from below to above
+- 🟫Brown text: command/data from below to above or same level
 - 🟦Blue text: command/data from above to below
 
 <p align="center">
