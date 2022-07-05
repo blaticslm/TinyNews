@@ -24,7 +24,11 @@ This app can successfully demonstrate the following features:
 ## Future Improvment
 - Adding like and dislike options on search results
 
-## App structures
+## App structure
+
+- 🟫Brown text: command/data from below to above
+- 🟦Blue text: command/data from above to below
+
 <p align="center">
 <img src="https://github.com/blaticslm/TinyNews/blob/main/screenshots/program%20chart.drawio.png">
 </p>
