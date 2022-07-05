@@ -22,3 +22,6 @@ This app can successfully demonstrate the following features:
 - Save and delete the news
 
 ## App structures
+<p align="center">
+<img src="https://github.com/blaticslm/TinyNews/blob/main/screenshots/program%20chart.drawio.png">
+</p>
