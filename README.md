@@ -21,7 +21,10 @@ This app can successfully demonstrate the following features:
 - Search the news by using keywords
 - Save and delete the news
 
+## Future Improvment
+- Adding like and dislike options on search results
+
 ## App structures
 <p align="center">
-<img src="https://github.com/blaticslm/TinyNews/blob/main/screenshots/program%20chart.drawio.png">
+<img src="https://github.com/blaticslm/TinyNews/blob/main/screenshots/program%20chart.drawio.png" width="80%">
 </p>
